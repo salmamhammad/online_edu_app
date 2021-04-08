@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:context="com.example.salma.systemedu.LevelActivity">
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            />
+
+
+
+        <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/progressBarq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="textq"
+        android:id="@+id/textquestion"
+        android:layout_margin="20dp"
+        android:visibility="visible" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:elevation="10dp"
+
+        android:id="@+id/rgroup"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:visibility="visible"
+        android:measureWithLargestChild="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/rbtn1"
+            android:onClick="rpclick"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/rbtn2"
+            android:onClick="rpclick"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton"
+            android:id="@+id/rbtn3"
+            android:onClick="rpclick"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:checked="false" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="continue"
+            android:id="@+id/continuebtn1"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+
+            android:visibility="visible"
+            android:background="#78de66"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+</LinearLayout>
+<android.support.design.widget.NavigationView
+android:id="@+id/nav_view"
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:layout_gravity="start"
+android:fitsSystemWindows="true"
+app:headerLayout="@layout/nav_header_main"
+app:menu="@menu/activity_main_drawer"
+    android:visibility="visible" />
+    </android.support.v4.widget.DrawerLayout>
